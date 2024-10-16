@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Painel Recomendações Cachola</title>
+</head>
+<body>
+    <div class="teste">
+        <img src="assets/senaclogo.png" alt="Logo Cachola" class="logo-cachola">
+        <div class="titulo-container">
+            <h1 class="titulo">Cachola Recomenda</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Painel de Recomendações (Teste)</h1>
+        <form id="searchForm">
+            <label for="eixo">Eixo Tecnológico:</label>
+            <select id="eixo" name="eixo" required>
+                <option value="">Selecione</option>
+            </select>
+
+            <label for="segmento">Segmento:</label>
+            <select id="segmento" name="segmento" required>
+                <option value="">Selecione</option>
+            </select>
+
+            <label for="tipoCurso">Tipo de Curso:</label>
+            <select id="tipoCurso" name="tipoCurso">
+                <option value="">Selecione</option>
+            </select>
+
+            <button type="submit">Pesquisar</button>
+        </form>
+
+        <div id="filterToggle">
+            <i class="fa-solid fa-filter" style="color: #000000;"></i>
+        </div>
+
+        <div id="additionalFilters" style="display: none;">
+            <form id="filterForm">
+                <label for="autor">Autor:</label>
+                <input type="text" id="autor" name="autor" placeholder="Digite o nome do autor" autocomplete="off">
+
+                <label for="formato">Formato:</label>
+                <select id="formato" name="formato">
+                    <option value="">Todos</option>
+                </select>
+            </form>
+        </div>
+
+        <p id="quantidadeResultados">0 conteúdos encontrados</p>
+
+        <div id="results" class="card-container"></div>
+    </div>
+</body>
+</html>
